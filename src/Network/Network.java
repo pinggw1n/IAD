@@ -31,5 +31,12 @@ public class Network {
 		layers.getFirst().loadInputValues(inputValues);
 	}
 	//forward propagation
+	public void forwardPropagation() {
+		//total net input  = w0*input0 + w1*input1 + w2*input2 + w3*input3 ( + w'bias*inputBias)
+		//squshing the total net input using the sigmoid function 1/(1+exp(-total_net_input)
+		for(int layerNumber = 1; layerNumber < layerQuantity - 1; layerNumber++) {
+			layers.get(layerNumber).forwardPropagation(layers.get(layerNumber - 1));;
+		}
+	}
 	//backpropagation
 }

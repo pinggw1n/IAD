@@ -23,13 +23,18 @@ public class InputLayer extends Layer{
 				neurons.get(neuronNumber).SetOutputValue(inputValues.get(neuronNumber));
 				System.out.println("Neuron " + neuronNumber + " has outputValue: " + neurons.get(neuronNumber).GetOutputValue());
 			}
-			System.out.println("Bias wynosi: " + neurons.get(neurons.size() - 1).GetOutputValue());
+			System.out.println("Bias: " + neurons.get(neurons.size() - 1).GetOutputValue());
 		} else {
 			for(int neuronNumber = 0; neuronNumber < neurons.size(); neuronNumber++) {
 				neurons.get(neuronNumber).SetOutputValue(inputValues.get(neuronNumber));
 				System.out.println("Neuron " + neuronNumber + " has outputValue: " + neurons.get(neuronNumber).GetOutputValue());
 			}
 		}
+	}
+	@Override
+	public void forwardPropagation(Layer previousLayer) {
+		// TODO Auto-generated method stub
+		System.out.println("Input layer does nothing");
 	}
 	
 }

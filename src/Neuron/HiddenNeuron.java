@@ -15,4 +15,10 @@ public class HiddenNeuron extends Neuron{
 			System.out.println("" + weights.get(weightNumber));
 		}
 	}
+
+	@Override
+	public void CountOutputValue() {
+		// TODO Auto-generated method stub
+		
+	}
 }

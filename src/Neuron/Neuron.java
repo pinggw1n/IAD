@@ -2,7 +2,7 @@ package Neuron;
 
 import java.util.LinkedList;
 
-public class Neuron {
+public abstract class Neuron {
 	protected double neuronOutputValue;
 	protected LinkedList<Double> weights;
 	public Neuron() {
@@ -14,4 +14,5 @@ public class Neuron {
 	public double GetOutputValue() {
 		return neuronOutputValue;
 	}
+	public abstract void CountOutputValue();
 }

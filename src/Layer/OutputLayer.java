@@ -15,4 +15,9 @@ public class OutputLayer extends Layer{
 	public void loadInputValues(LinkedList<Double> inputValues) {
 		System.out.println("values are loaded in inputLayer");
 	}
+	@Override
+	public void forwardPropagation(Layer previousLayer) {
+		// TODO Auto-generated method stub
+		
+	}
 }
