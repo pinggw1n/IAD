@@ -8,6 +8,7 @@ public class MainClass {
 		// TODO Auto-generated method stub
 		LinkedList<Integer> topology = new LinkedList<Integer>();
 		Scanner input = new Scanner(System.in);
+		boolean bias;
 		System.out.println("How many layers would you like to create?");
 		int layerQuantity = input.nextInt();
 		System.out.println("How many neurons would you like to create in input layer?");
@@ -18,7 +19,15 @@ public class MainClass {
 		}
 		System.out.println("How many neurons would you like to create in output layer?");
 		topology.add(input.nextInt());
-		Network net = new Network(topology);
+		System.out.println("Do you want to include bias?");
+		if(input.next().equals("t")) {
+			System.out.println("bias included");
+			bias = true;
+		} else {
+			System.out.println("bias not included");
+			bias = false;
+		}
+		Network net = new Network(topology, bias);
 	}
 
 }
