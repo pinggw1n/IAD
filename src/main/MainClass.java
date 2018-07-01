@@ -28,6 +28,13 @@ public class MainClass {
 			bias = false;
 		}
 		Network net = new Network(topology, bias);
+		
+		LinkedList<Double> inputValues = new LinkedList<Double>();
+		inputValues.add((double) 1);
+		inputValues.add((double) 1);
+		inputValues.add((double) 1);
+		inputValues.add((double) 0);
+		net.loadInputValues(inputValues);
 	}
 
 }

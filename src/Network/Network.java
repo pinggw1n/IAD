@@ -10,7 +10,7 @@ import Layer.OutputLayer;
 public class Network {
 	private int layerQuantity;
 	private LinkedList<Layer> layers;
-	private boolean bias;
+	public static boolean bias;
 	
 	
 	public Network(LinkedList<Integer> topology, boolean bias) {
@@ -25,6 +25,10 @@ public class Network {
 		}
 		//creating output layer and its neurons
 		layers.add(new OutputLayer(topology.getLast(), layers.get(layers.size() - 1).GetNeuronNumber()));
+	}
+	//wczytanie danych
+	public void loadInputValues(LinkedList<Double> inputValues) {
+		layers.getFirst().loadInputValues(inputValues);
 	}
 	//forward propagation
 	//backpropagation

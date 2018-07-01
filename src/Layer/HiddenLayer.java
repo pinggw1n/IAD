@@ -1,5 +1,7 @@
 package Layer;
 
+import java.util.LinkedList;
+
 import Neuron.Bias;
 import Neuron.HiddenNeuron;
 
@@ -13,5 +15,8 @@ public class HiddenLayer extends Layer{
 		if(bias == true) {
 			this.neurons.add(new Bias());
 		}
+	}
+	public void loadInputValues(LinkedList<Double> inputValues) {
+		System.out.println("values are loaded in inputLayer");
 	}
 }

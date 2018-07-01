@@ -8,4 +8,10 @@ public class Neuron {
 	public Neuron() {
 		
 	}
+	public void SetOutputValue(double outputValue) {
+		neuronOutputValue = outputValue;
+	}
+	public double GetOutputValue() {
+		return neuronOutputValue;
+	}
 }

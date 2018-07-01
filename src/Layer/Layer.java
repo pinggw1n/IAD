@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import Neuron.Neuron;
 
-public class Layer {
+public abstract class Layer {
 	protected LinkedList<Neuron> neurons;
 	public int GetNeuronNumber() {
 		return neurons.size();
@@ -12,4 +12,5 @@ public class Layer {
 	public Layer() {
 		neurons = new LinkedList<Neuron>();
 	}
+	public abstract void loadInputValues(LinkedList<Double> inputValues);
 }

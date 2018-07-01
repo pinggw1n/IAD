@@ -1,5 +1,7 @@
 package Layer;
 
+import java.util.LinkedList;
+
 import Neuron.OutputNeuron;
 
 public class OutputLayer extends Layer{
@@ -9,5 +11,8 @@ public class OutputLayer extends Layer{
 		for(int neuronNumber = 0; neuronNumber < neuronQuantity; neuronNumber++) {
 			this.neurons.add(new OutputNeuron(previousLayerNeurons));
 		}
+	}
+	public void loadInputValues(LinkedList<Double> inputValues) {
+		System.out.println("values are loaded in inputLayer");
 	}
 }
