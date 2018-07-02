@@ -17,8 +17,12 @@ public class HiddenNeuron extends Neuron{
 	}
 
 	@Override
-	public void CountOutputValue() {
+	public void CountOutputValue(LinkedList<Double> previousOutputs) {
 		// TODO Auto-generated method stub
-		
+		for(int previousOutputNumber = 0; previousOutputNumber < previousOutputs.size(); previousOutputNumber++) {
+			System.out.println("" + weights.get(previousOutputNumber)*previousOutputs.get(previousOutputNumber));
+			neuronOutputValue += weights.get(previousOutputNumber)*previousOutputs.get(previousOutputNumber);
+		}
+		System.out.println("Hidden neuron output value = " + neuronOutputValue);
 	}
 }

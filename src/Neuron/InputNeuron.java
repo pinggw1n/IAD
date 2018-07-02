@@ -1,5 +1,7 @@
 package Neuron;
 
+import java.util.LinkedList;
+
 public class InputNeuron extends Neuron{
 	public InputNeuron() {
 		super();
@@ -7,9 +9,9 @@ public class InputNeuron extends Neuron{
 	}
 
 	@Override
-	public void CountOutputValue() {
+	public void CountOutputValue(LinkedList<Double> previousOutputs) {
 		// TODO Auto-generated method stub
-		System.out.println("InputNeuron does not count its outputValue");
+		System.out.println("input neuron does not count output value");
 	}
 	
 }

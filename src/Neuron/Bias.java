@@ -1,5 +1,7 @@
 package Neuron;
 
+import java.util.LinkedList;
+
 public class Bias extends Neuron{
 	public Bias() {
 		super();
@@ -8,7 +10,7 @@ public class Bias extends Neuron{
 	}
 
 	@Override
-	public void CountOutputValue() {
+	public void CountOutputValue(LinkedList<Double> previousOutputs) {
 		// TODO Auto-generated method stub
 		System.out.println("bias does not count output value");
 	}

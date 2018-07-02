@@ -6,6 +6,7 @@ import Layer.HiddenLayer;
 import Layer.InputLayer;
 import Layer.Layer;
 import Layer.OutputLayer;
+import Neuron.Neuron;
 
 public class Network {
 	private int layerQuantity;
@@ -34,8 +35,12 @@ public class Network {
 	public void forwardPropagation() {
 		//total net input  = w0*input0 + w1*input1 + w2*input2 + w3*input3 ( + w'bias*inputBias)
 		//squshing the total net input using the sigmoid function 1/(1+exp(-total_net_input)
-		for(int layerNumber = 1; layerNumber < layerQuantity - 1; layerNumber++) {
-			layers.get(layerNumber).forwardPropagation(layers.get(layerNumber - 1));;
+		for(int layerNumber = 1; layerNumber < layerQuantity; layerNumber++) {
+			System.out.println("Previous outputs: ");
+			for(Double d : layers.get(layerNumber - 1).GetAllOutput()) {
+				System.out.println("" + d);
+			}
+			layers.get(layerNumber).forwardPropagation(layers.get(layerNumber - 1).GetAllOutput());;
 		}
 	}
 	//backpropagation

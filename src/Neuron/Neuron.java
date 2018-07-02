@@ -6,7 +6,7 @@ public abstract class Neuron {
 	protected double neuronOutputValue;
 	protected LinkedList<Double> weights;
 	public Neuron() {
-		
+		neuronOutputValue = 0;
 	}
 	public void SetOutputValue(double outputValue) {
 		neuronOutputValue = outputValue;
@@ -14,5 +14,5 @@ public abstract class Neuron {
 	public double GetOutputValue() {
 		return neuronOutputValue;
 	}
-	public abstract void CountOutputValue();
+	public abstract void CountOutputValue(LinkedList<Double> previousOutputs);
 }

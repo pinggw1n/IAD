@@ -13,5 +13,12 @@ public abstract class Layer {
 		neurons = new LinkedList<Neuron>();
 	}
 	public abstract void loadInputValues(LinkedList<Double> inputValues);
-	public abstract void forwardPropagation(Layer previousLayer);
+	public LinkedList<Double> GetAllOutput(){
+		LinkedList<Double> outputList = new LinkedList<Double>();
+		for(Neuron n : neurons) {
+			outputList.add(n.GetOutputValue());
+		}
+		return outputList;
+	}
+	public abstract void forwardPropagation(LinkedList<Double> previousOutputs);
 }
